@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: livro
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/livro?currentSchema=livro
+    username: postgres
+    password: postgresql
+  jpa:
+    properties:
+      hibernate:
+        default_schema: livro
+  flyway:
+    baseline-on-migrate: true
+    baseline-version: 0
+    schemas: livro
+
+server:
+  port: 8090
+  servlet:
+    context-path: /api
